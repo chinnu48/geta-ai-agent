@@ -1,0 +1,2 @@
+Explain AI Agents
+Write a simple explanation of how AI agents use memory, planning, execution, and verification.
