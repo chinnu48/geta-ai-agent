@@ -1,7 +1,5 @@
 # Geta AI Agent Memory & Task Execution Platform
 
-This project implements Option 1 from the Geta.ai engineering assignment: an AI-powered task execution system with persistent memory, multi-step reasoning, retries, execution history, and recovery controls.
-
 ## Features
 
 - Task input through REST API and uploaded text files
@@ -70,7 +68,3 @@ Example task body:
   "description": "Write a clear explanation of how machine learning works, including supervised and unsupervised learning."
 }
 ```
-
-## Notes
-
-The application requires a valid Gemini API key with available quota. If the provider returns quota, model, or API-key errors, the system records the failure reason on the task and avoids repeatedly burning retries on permanent provider errors.
