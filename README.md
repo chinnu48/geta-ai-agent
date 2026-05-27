@@ -50,7 +50,7 @@ Open the API docs:
 http://localhost:8000/docs
 ```
 
-## Demo Flow
+## Flow
 
 1. Call `GET /api/v1/health`.
 2. Create a task with `POST /api/v1/tasks`.
