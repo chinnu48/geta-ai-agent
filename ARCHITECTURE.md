@@ -1,9 +1,5 @@
 # Architecture
 
-## System Overview
-
-The platform is a FastAPI service that accepts task requests, stores them in SQLite, and runs an AI agent workflow in the background. Each workflow stage writes execution logs so the system can explain what happened during task execution.
-
 ## Main Components
 
 - `app/main.py`: FastAPI app setup, database table creation, router registration.
@@ -24,14 +20,6 @@ The platform is a FastAPI service that accepts task requests, stores them in SQL
 8. The verifier checks whether the result satisfies the original request.
 9. The task result, memory summary, and reasoning logs are persisted.
 
-## Reliability Decisions
-
-- Each background task creates its own database session instead of reusing the request session.
-- Failed tasks store failure reasons for debugging.
-- Provider errors such as invalid API key, missing model, and quota exhaustion are treated as non-retryable.
-- `POST /api/v1/tasks/{task_id}/retry` lets an operator retry a task after fixing configuration.
-- `POST /api/v1/tasks/recover` requeues tasks that were left pending, running, or retrying after an interruption.
-- Exact duplicate task descriptions are not executed again.
 
 ## Database Tables
 
