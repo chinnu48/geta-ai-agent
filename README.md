@@ -1,4 +1,4 @@
-# Geta AI Agent Memory & Task Execution Platform
+# Geta AI Agent
 
 ## Features
 
